@@ -1,0 +1,163 @@
+Q1. Create a Function to Wish a User Happy Birthday, Ask User Date and Month and if it match with today data and month wish him/her
+
+function wish(d, m) {
+    const dates = new Date();
+    var day = dates.getDate();
+    var month = dates.getMonth() + 1;
+    if( d == day && m == month ) {
+        console.log("Happy Birthday");
+    }
+    else {
+        console.log("Not Today");
+    }
+}
+var d = prompt("Enter todays date: ");
+var m = prompt("Enter todays month: ");
+wish(d, m);
+VM26:6 
+Happy Birthday
+undefined
+
+-------------------------------------------------
+
+function wish(d, m) {
+    const dates = new Date();
+    var day = dates.getDate();
+    var month = dates.getMonth() + 1;
+    if( d == day && m == month ) {
+        console.log("Happy Birthday");
+    }
+    else {
+        console.log("Not Today");
+    }
+}
+var d = prompt("Enter todays date: ");
+var m = prompt("Enter todays month: ");
+wish(d, m);
+VM30:9 
+Not Today
+undefined
+
+
+
+
+
+Q2. Enter the Age and Compute Total Weeks in a Human Life
+
+function weeks (age) {
+    console.log("Totals weeks in",age, "age is", age * 52);
+}
+var age = prompt("Enter your age: ");
+weeks(age);
+VM34:2 
+Totals weeks in 23 age is 1196
+undefined
+
+
+
+
+
+Q4. A Sandwich Calculator
+1. Write a function called sandwich calculator. This should accept one value: bread
+2. The function should return the total number of possible sandwiches based on the amount of breads available. I need 2 breads to make one sandwich, so if there are 10 breads, it should return 5. Test your function with console.log.
+3. Extend your function so it accepts two values, bread and cheese.
+4. It takes two sbreads and one cheese to make a sandwich. The function should return the total number of possible sandwiches, so if there are breads, but only 1 cheese, it should return 1.
+
+function sandwichCalculator (bread) {
+    console.log("Total Sandwich: ", bread/2);
+}
+var bread = prompt("Enter no. of breads: ");
+sandwichCalculator(bread);
+VM38:2 
+Total Sandwich:  13
+undefined
+
+--------------------------------------------------
+
+function sandwichCalculator (bread) {
+    console.log("Total Sandwich: ", bread/2);
+}
+var bread = prompt("Enter no. of breads: ");
+sandwichCalculator(bread);
+VM42:2 Total Sandwich:  7.5
+undefined
+function sandwichCalculator (bread) {
+    var breads = Math.floor(bread/2);
+    console.log("Total Sandwich:", breads);
+}
+var bread = prompt("Enter no. of breads: ");
+sandwichCalculator(bread);
+VM46:3 
+Total Sandwich: 6
+undefined
+
+----------------------------------------------------
+
+function sandwichCalculator (bread) {
+    var breads = Math.floor(bread/2);
+    console.log("Total Sandwich:", breads);
+}
+var bread = prompt("Enter no. of breads: ");
+sandwichCalculator(bread);
+VM55:3 Total Sandwich: 3
+undefined
+function sandwichCalculator (bread, cheese) {
+    var breads = Math.floor(bread/2);
+    
+    if(breads > cheese) {
+        console.log("Total Sandwich:", cheese);
+    }
+    else {
+        console.log("Total Sandwich:", breads);
+    }
+}
+var bread = prompt("Enter no. of breads: ");
+var cheese = prompt("Enter no. of cheese: ");
+sandwichCalculator(bread, cheese);
+VM59:5 
+Total Sandwich: 5
+undefined
+
+-----------------------------------------------------
+
+function sandwichCalculator (bread, cheese) {
+    var breads = Math.floor(bread/2);
+    
+    if(breads > cheese) {
+        console.log("Total Sandwich:", cheese);
+    }
+    else {
+        console.log("Total Sandwich:", breads);
+    }
+}
+var bread = prompt("Enter no. of breads: ");
+var cheese = prompt("Enter no. of cheese: ");
+sandwichCalculator(bread, cheese);
+VM63:8 
+Total Sandwich: 6
+undefined
+
+
+
+
+
+Q5. Add the Following Case in add function
+a) add(10,[1,"2",3],[one, "Amit",  two,"100"],"20")
+
+function add() {
+    var sum = 0;
+    for(var i=0; i<arguments.length; i++) {
+        if(typeof arguments[i] == 'function') {
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))? 0:parseInt(arguments[i]));
+    }
+    console.log(sum);
+}
+function one () { return 10; }
+function two () { return 30; }
+function three () { return 50; }
+add(10, 30, "40", "50", one, two, three, "Marten");
+VM67:9 
+220
+undefined
