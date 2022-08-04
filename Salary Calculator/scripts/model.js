@@ -30,7 +30,7 @@ const salaryOP = {
         }
     },
     gross (bs) {
-        return (salaryOP.house(bs) + salaryOP.travel(bs) + salaryOP.medical(bs) + salaryOP.dear(bs));
+        return (salaryOP.house(bs) + salaryOP.travel(bs) + salaryOP.medical(bs) + salaryOP.dear(bs) + bs);
     },
     net (bs) {
         return (salaryOP.gross(bs) - salaryOP.fund(bs) - salaryOP.tax(bs));
