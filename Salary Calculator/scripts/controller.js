@@ -1,7 +1,7 @@
 const compute = document.getElementById("compute");
 
 compute.addEventListener('click', () => {
-    const bs = parseInt(document.getElementById("basicSalary").value);
+    const bs = (isNaN(parseInt(document.getElementById("basicSalary").value))? 0 : parseInt(document.getElementById("basicSalary").value));
 
     document.getElementById("HRA").innerText = salaryOP.house(bs);
     document.getElementById("TA").innerText = salaryOP.travel(bs);

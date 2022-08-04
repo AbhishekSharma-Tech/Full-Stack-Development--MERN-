@@ -1,0 +1,91 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    background-color: #142d4c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #385170;
+    border: 2px solid #9fd3c7;
+    margin-top: 2vw;
+    width: 500px;
+    /* padding: 10px; */
+    /* display: inline-block; */
+    /* max-width: 500px; */
+    /* margin: 0 auto; */
+}
+
+.header, .input, .button, .allowance {
+    margin: 10px;
+}
+
+.header {
+    text-align: center;
+    color: #f95959;
+}
+
+.salary {
+    display: inline-block;
+    /* justify-content: space-around; */
+    padding: 10px;
+}
+
+.salary input {
+    height: 30px;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+}
+
+.salary label {
+    padding-right: 50px;
+    font-size: 25px;
+    color: #e3e3e3;
+}
+
+.cal {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.cal button {
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 550;
+    color: rgb(31, 31, 31);
+    border: 2px solid white;
+    background-color: #9fd3c7;
+}
+
+.cal button:hover {
+    background-color: #e3e3e3;
+}
+
+.allowance {
+    color: #9fd3c7;
+    
+}
+
+.allowance fieldset {
+    border-width: 5px;
+    border-color: #e3e3e3;
+    border-style: ridge;
+}
+
+.allowance legend {
+    font-size: 25px;
+    color: #e3e3e3;
+}
+
+p{
+    display: flex;
+    justify-content: space-between;
+}

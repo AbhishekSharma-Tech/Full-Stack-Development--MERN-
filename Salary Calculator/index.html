@@ -5,32 +5,41 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Salary Calc</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/style.css'>
     <script src='scripts/model.js' defer></script>
     <script src='scripts/controller.js' defer></script>
 </head>
 <body>
-    <h1>Salary Calculator</h1>
+    <div class="container">
+        <div class="header">
+            <h1>Salary Calculator</h1>
+        </div>
 
-    <label for="basicSalary">Basic Salary</label>
-    <input type="text" placeholder="Enter Your Basic Salary Here..." id="basicSalary" size="30">
-    
-    <br>
+        <hr>
 
-    <button id="compute">Compute</button>
+        <div class="salary">
+            <label for="basicSalary">Basic Salary</label>
+            <input type="text" placeholder="Enter Your Basic Salary Here..." id="basicSalary" size="37">
+        </div>
 
-    <br><br>
+        <div class="cal">
+            <button id="compute">Compute</button>
+        </div>
 
-    <fieldset>
-        <legend>Allowance</legend>
-        <p>HRA is <span id="HRA"></span> </p>
-        <p>TA is <span id="TA"></span> </p>
-        <p>MA is <span id="MA"></span> </p>
-        <p>DA is <span id="DA"></span> </p>
-        <p>PF is <span id="PF"></span> </p>
-        <p>Tax is <span id="Tax"></span> </p>
-        <p>Gross Salary is <span id="GS"></span> </p>
-        <p>Net Salary is <span id="NS"></span> </p>
-    </fieldset>
+        <div class="allowance">
+            <fieldset>
+                <legend>Allowance</legend>
+                <p>HRA <span id="HRA"></span> </p>
+                <p>TA <span id="TA"></span> </p>
+                <p>MA <span id="MA"></span> </p>
+                <p>DA <span id="DA"></span> </p>
+                <p>PF <span id="PF"></span> </p>
+                <p>Tax <span id="Tax"></span> </p>
+                <p>Gross Salary <span id="GS"></span> </p>
+                <p>Net Salary <span id="NS"></span> </p>
+            </fieldset>
+        </div>
+        
+    </div>
 </body>
 </html>
