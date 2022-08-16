@@ -1,0 +1,12 @@
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btns button {
+    width: 60px;
+    height: 60px;
+    margin: 50px;
+    font-size: 35px;
+    padding: 0;
+}
